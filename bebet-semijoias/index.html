@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bebet Semijoias - Semijoias elegantes e sofisticadas para mulheres que valorizam o brilho em cada detalhe. Anéis, colares, brincos e pulseiras.">
+    <meta name="theme-color" content="#d4af7a">
+    <title>Bebet Semijoias - Elegância que Brilha em Você</title>
+
+    <!-- Google Fonts: Playfair Display (títulos) + Poppins (corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones (CDN confiável) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos do site -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- ============================================== -->
+    <!-- CABEÇALHO / HEADER                              -->
+    <!-- ============================================== -->
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <!-- LOGO -->
+            <a href="#inicio" class="logo">
+                <span class="logo__texto">
+                    <span class="logo__principal">Bebet</span>
+                    <span class="logo__separador">·</span>
+                    <span class="logo__sub">Semijoias</span>
+                </span>
+            </a>
+
+            <!-- MENU DE NAVEGAÇÃO -->
+            <nav class="nav" id="nav">
+                <ul class="nav__lista">
+                    <li><a href="#inicio" class="nav__link">Início</a></li>
+                    <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
+                    <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                    <li><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- ÍCONES DO HEADER (busca + carrinho) -->
+            <div class="header__icones">
+                <button class="icone-btn" id="btn-busca" aria-label="Buscar produtos">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="icone-btn carrinho-btn" id="btn-carrinho" aria-label="Abrir carrinho">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="carrinho-contador" id="carrinho-contador">0</span>
+                </button>
+                <button class="icone-btn menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ============================================== -->
+    <!-- HERO / BANNER PRINCIPAL                          -->
+    <!-- ============================================== -->
+    <section class="hero" id="inicio">
+        <div class="container hero__container">
+            <div class="hero__conteudo">
+                <p class="hero__subtitulo">✨ Coleção 2026 ✨</p>
+                <h1 class="hero__titulo">Elegância que <em>brilha</em> em você</h1>
+                <p class="hero__descricao">
+                    Semijoias artesanais com banho de ouro 18k, criadas para realçar a sua beleza única em cada ocasião.
+                </p>
+                <div class="hero__botoes">
+                    <a href="#catalogo" class="btn btn--primario">Ver Catálogo</a>
+                    <a href="#sobre" class="btn btn--secundario">Conhecer a Marca</a>
+                </div>
+            </div>
+            <div class="hero__imagem">
+                <!-- Imagem ilustrativa (placeholder de joia) -->
+                <div class="hero__placeholder">
+                    <i class="fas fa-gem"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- CATEGORIAS (FILTRO RÁPIDO)                      -->
+    <!-- ============================================== -->
+    <section class="categorias" id="categorias">
+        <div class="container">
+            <h2 class="secao-titulo">Navegue por <em>Categoria</em></h2>
+            <div class="categorias__grid" id="categorias-grid">
+                <!-- Categorias são renderizadas dinamicamente via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- CATÁLOGO DE PRODUTOS                            -->
+    <!-- ============================================== -->
+    <section class="catalogo" id="catalogo">
+        <div class="container">
+            <h2 class="secao-titulo">Nosso <em>Catálogo</em></h2>
+            <p class="secao-descricao">Peças exclusivas feitas com carinho e materiais de alta qualidade.</p>
+
+            <!-- FILTROS DE CATEGORIA (botões) -->
+            <div class="filtros" id="filtros">
+                <!-- Botões de filtro são renderizados dinamicamente -->
+            </div>
+
+            <!-- GRID DE PRODUTOS -->
+            <div class="produtos-grid" id="produtos-grid">
+                <!-- Cards de produtos são renderizados dinamicamente -->
+            </div>
+
+            <!-- MENSAGEM QUANDO NÃO HÁ PRODUTOS -->
+            <div class="produtos-vazio" id="produtos-vazio" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>Nenhum produto encontrado nesta categoria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SEÇÃO SOBRE A MARCA                             -->
+    <!-- ============================================== -->
+    <section class="sobre" id="sobre">
+        <div class="container sobre__container">
+            <div class="sobre__imagem">
+                <div class="sobre__placeholder">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            <div class="sobre__conteudo">
+                <p class="sobre__subtitulo">Nossa História</p>
+                <h2 class="sobre__titulo">Bebet <em>Semijoias</em></h2>
+                <p>
+                    A Bebet Semijoias nasceu do amor por detalhes e do desejo de oferecer peças sofisticadas, com acabamento impecável e preços justos.
+                </p>
+                <p>
+                    Cada peça é cuidadosamente selecionada e banhada em ouro 18k, garantindo durabilidade, brilho e aquela sensação especial de usar algo feito para você.
+                </p>
+                <p>
+                    Trabalhamos com semijoias antialérgicas, perfeitas para o uso diário ou para ocasiões especiais — porque você merece brilhar em todos os momentos.
+                </p>
+                <div class="sobre__destaques">
+                    <div class="destaque">
+                        <i class="fas fa-gem"></i>
+                        <span>Banho de ouro 18k</span>
+                    </div>
+                    <div class="destaque">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Antialérgicas</span>
+                    </div>
+                    <div class="destaque">
+                        <i class="fas fa-truck"></i>
+                        <span>Envio para todo Brasil</span>
+                    </div>
+                    <div class="destaque">
+                        <i class="fas fa-gift"></i>
+                        <span>Embalagem presente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- NEWSLETTER / CTA                                -->
+    <!-- ============================================== -->
+    <section class="newsletter" id="contato">
+        <div class="container newsletter__container">
+            <h2 class="newsletter__titulo">Fique por dentro das <em>novidades</em></h2>
+            <p>Siga-nos nas redes sociais e acompanhe lançamentos, promoções e dicas de estilo.</p>
+            <div class="newsletter__redes">
+                <a href="#" class="rede-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="rede-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="rede-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="rede-social" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- RODAPÉ                                          -->
+    <!-- ============================================== -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <h3 class="footer__titulo">Bebet Semijoias</h3>
+                <p>Elegância e sofisticação em cada peça. Semijoias com banho de ouro 18k para mulheres que brilham.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__titulo">Links Rápidos</h4>
+                <ul class="footer__lista">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#sobre">Sobre a Marca</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__titulo">Atendimento</h4>
+                <ul class="footer__lista">
+                    <li><i class="fas fa-clock"></i> Seg à Sex, 9h às 18h</li>
+                    <li><i class="fas fa-envelope"></i> contato@bebetsemijoias.com</li>
+                    <li><i class="fab fa-whatsapp"></i> (11) 99999-9999</li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__titulo">Siga-nos</h4>
+                <div class="footer__redes">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Bebet Semijoias. Todos os direitos reservados. Feito com <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- MODAL DO CARRINHO (oculto por padrão)           -->
+    <!-- ============================================== -->
+    <div class="carrinho-overlay" id="carrinho-overlay"></div>
+    <aside class="carrinho" id="carrinho" aria-hidden="true">
+        <div class="carrinho__cabecalho">
+            <h3 class="carrinho__titulo"><i class="fas fa-shopping-bag"></i> Seu Carrinho</h3>
+            <button class="carrinho__fechar" id="carrinho-fechar" aria-label="Fechar carrinho">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="carrinho__corpo" id="carrinho-corpo">
+            <!-- Itens do carrinho são renderizados via JS -->
+        </div>
+
+        <div class="carrinho__rodape" id="carrinho-rodape">
+            <div class="carrinho__subtotal">
+                <span>Subtotal:</span>
+                <strong id="carrinho-total">R$ 0,00</strong>
+            </div>
+            <p class="carrinho__frete"><i class="fas fa-info-circle"></i> Frete calculado no WhatsApp</p>
+            <button class="btn btn--primario btn--finalizar" id="btn-finalizar">
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido
+            </button>
+            <button class="btn btn--limpar" id="btn-limpar">Limpar Carrinho</button>
+        </div>
+    </aside>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="#" class="whatsapp-float" id="whatsapp-float" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ============================================== -->
+    <!-- SCRIPTS                                         -->
+    <!-- Ordem: dados → lógica → renderização           -->
+    <!-- ============================================== -->
+    <script src="js/produtos.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
